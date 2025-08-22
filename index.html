@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriSmart Advisor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>AgriSmart Advisor</h1>
+      <p>
+        Use this MVP to get tailored advice for your crops. Choose a crop, enter
+        your soil pH, and select the rainfall level to receive basic
+        recommendations. This tool does not replace expert agronomic advice but
+        provides a starting point for planning your planting season.
+      </p>
+      <form id="advisorForm">
+        <label for="crop">Crop Type</label>
+        <select id="crop" required>
+          <option value="">Select a crop</option>
+          <option value="maize">Maize</option>
+          <option value="beans">Beans</option>
+          <option value="wheat">Wheat</option>
+        </select>
+
+        <label for="ph">Soil pH</label>
+        <input
+          type="number"
+          id="ph"
+          step="0.1"
+          min="4"
+          max="9"
+          placeholder="e.g. 6.5"
+          required
+        />
+
+        <label for="rainfall">Rainfall Level</label>
+        <select id="rainfall" required>
+          <option value="">Select rainfall</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <button type="submit">Get Advice</button>
+      </form>
+      <div id="recommendations" class="hidden"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
